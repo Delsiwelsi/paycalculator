@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Philippines Salary calculator</title>
+        <link rel="stylesheet" href="styles2.css";>
+
+    
+    </head>
+    <body>
+        
+    
+    <div>
+        <form >
+        <table>
+        
+        <div>    
+        <td colspan=4>
+            <p style="text-align: center;"><b>2022 Philippines Pay Calculator</b></p><br>
+ 
+            <!--<p>
+                To compute your 2022 Philippines pay, follow the steps in the table below. You only need
+                to enter the data in the fields and it will perform the necessary
+                computations for you. 
+            </p><br>-->
+            <p>
+                Use this calculator to quickly estimate how much tax you will need to pay on your income. 
+                You only need to enter the data in the fields and it will perform the necessary computations for you. 
+                This calculator is always up to date.
+            </p><br>
+        </td>
+    </div>    
+
+        <tr>                                 <!--Sector-->
+            <!-- <td>&nbsp;</td> -->
+            <td id="sector_option" class="options" colspan=3><b>SECTOR</b>
+                <select>
+                <option selected>Private</option>
+                <option></option>
+                </select>
+            </td>
+        </tr>    
+        
+
+        <tr>                                 <!--Pay schedule-->
+            <!-- <td>&nbsp;</td> -->
+            <td id="sched_option"  class="options" colspan=3><b>PAY SCHEDULE</b>
+                <select>
+                <option selected>Semi-monthly</option>
+                <option></option>
+                <option></option>
+                <option></option>
+                </select>
+            </td>
+        </tr>    
+         
+        <tr>                                 <!--Gross Pay Calculator-->
+                <tr>
+                <td>Basic Pay</td>
+                <td><input type="text" class="amount" id="basic_pay"></td>
+                </tr>
+                
+                <tr>
+                <td><i>Less: </i>Deductions i.e., Lates, absences, undertime, LWOP, etc.</td>
+                <td><input type="text" class="amount" id="deductions"></td>
+                </tr>
+
+                <tr>
+                <td><i>Add: </i>Non-taxable allowance</td>
+                <td><input type="text" class="amount" id="non_tax_allowance"></td>
+                </tr>
+               
+                <tr>
+                    <td><i>Add: </i>Any Salary adjustment including 13th month adjustment</td>
+                    <td><input type="text" class="amount" id="add_basic"></td>
+                </tr>    
+
+                <tr>
+                <td><i>Add: </i>Other non-taxable allowances i.e., transpo, phone allowance, etc.</td>
+                <td><input type="text" class="amount" id="other_allowances"></td>
+                </tr>
+
+                <tr>
+                <td><i>Add: </i>13th Month Pay</td>
+                <td><input type="text" class="amount" id="thirteen"></td>
+                </tr>
+
+                <tr>
+                    <td><i>Add: </i>Management bonus</td>
+                    <td><input type="text" class="amount" id="bonus"></td>
+                </tr>
+
+                <tr>
+                <td><i>Add: </i>Leave encashment</td>
+                <td><input type="text" class="amount" id="leave"></td>
+                </tr>
+
+                <tr>
+                <td><b>Gross Pay</b></td>    
+                <td><input type="button" id="gc" class="calc-button"></td>
+                </tr>
+        </tr>
+                
+                <tr>                      <!--Taxable Pay Calculator-->
+                <td><i>Less: </i>Enter SSS employee contribution amount</td> 
+                <td><input type="text" id="sss_emp_contri" class="amount" ></td>
+                </tr>
+
+                <tr>
+                    <td><i>Less: </i>Philhealth employee contribution</td>
+                    <td><input type="text" class="amount" id="phil_health"></td>
+                </tr>
+                
+                <tr>
+                <td><i>Less: </i>Pag-ibig or HDMF employee contribution</td>
+                <td><input type="text" class="amount" id="hdmf"></td>
+                </tr>
+
+                <tr>
+                    <td><i>Add: </i>Portion of 13th month pay over Php90,000</td>
+                    <td><input type="text" class="amount" id="over_thirteen"></td>
+                    </tr>
+                
+                <tr>
+                    <td><i>Add: </i>Portion of bonus pay over Php90,000</td>
+                    <td><input type="text" class="amount" id="over_bonus"></td>
+                </tr>
+        
+
+                <tr>
+                <td><b>Taxable Pay</b></td>    
+                <td><input type="button" id="tc" class="calc-button"></td>
+                </tr>
+        </tr>
+
+
+        <tr>                                  <!--Tax Calculator-->
+                <td><b>Tax withheld based on taxable pay</b></td>    
+                <td><input type="button" id="t" class="calc-button"></td>
+        </tr>
+     
+
+        <tr>                                   <!--Net Pay Calculator-->
+                <tr>
+                <td><i>Less: </i>SSS loan</td>
+                <td><input type="text" class="amount" id="sss_loan"></td>
+                </tr>
+                
+                <tr>
+                <td><i>Less: </i>Pagibig or HDMF loan</td>
+                <td><input type="text" class="amount" id="hdmf_loan"></td>
+                </tr>
+
+                <tr>
+                    <td><i>Less: </i>Any SSS, Philhealth, or HDMF adjustment</td>
+                    <td><input type="text" class="amount" id="contri_adju"></td>
+                </tr>
+               
+               <tr>
+               <td><i>Less: </i>Tax deficit</td>
+               <td><input type="text" class="amount" id="deficit"></td>
+               </tr>
+               
+               <tr>
+               <td><i>Add: </i>Tax refund</td>
+               <td><input type="text" class="amount" id="refund"></td>
+               </tr>
+
+               <tr>
+               <td><b>Calculate Net Pay</b></td>    
+               <td><input type="button" id="n" class="calc-button"></td>
+               </tr>
+                    
+
+    </table>
+    </form>
+</div>
+        
+            
+        <script src="index2.js"></script>
+    </body>
+</html>
